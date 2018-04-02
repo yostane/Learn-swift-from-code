@@ -25,7 +25,7 @@ var month:Int = 11
 var correct1 = 45
 var correct2:Int
 var correct3:String = "Yay !"
-//This is incorrect
+//This following statement is incorrect
 //var incorreclyDefinedVariable
 
 //Swift is strongly typed (We can only set a value that has the same type, or is a subclass, or conforms to the type of the variable defined during its declaration)
@@ -39,8 +39,13 @@ print("new month", month)
 text = "Hello World"
 print("New text", text)
 
-//An immutable variable is called constant (its value cannot be changed)
-//We can define constants or immutable values using 'let' instead of 'var'
+//variables declared using 'var' are mutable; i.e. they can be changed during runtime
+var mutableText = "This is  mutable text"
+mutableText.insert("a", at: mutableText.index(mutableText.startIndex, offsetBy: 8))
+print("mutable after inserting 'a': ", mutableText)
+
+//An immutable variable (also called constant) is a variable whose value, and sometimes, contents cannot be changed
+//We can define immutable variables using 'let' instead of 'var'
 let constantMonth = 5
 print(constantMonth)
 let message = "Learn swift from code"
